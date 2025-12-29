@@ -1,0 +1,5 @@
+shekar
+pydub
+matplotlib
+requests
+tqdm
