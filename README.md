@@ -8,7 +8,15 @@ The recordings are provided by a combination of **volunteer contributors and pai
 
 Neyshekar is released incrementally. Each release represents a stable snapshot of the dataset at the time of publication.
 
-### v3 — 2026-03-23 ([download](https://doi.org/10.5281/zenodo.18073632))
+### v4 — 2026-05-14 ([download](https://doi.org/10.5281/zenodo.18073632))
+
+- Total samples: 40008
+- Total duration (hours): 63.03
+- Average clip duration (seconds): 5.67
+- Total tokens: 456268
+- Vocab size: 26758
+
+### v3 — 2026-03-23
 
 - Total samples: 30019
 - Total duration (hours): 45.71
