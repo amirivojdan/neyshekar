@@ -10,11 +10,19 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 
 ### v4 — 2026-05-14 ([download](https://doi.org/10.5281/zenodo.18073632))
 
-- Total samples: 40008
-- Total duration (hours): 63.03
-- Average clip duration (seconds): 5.67
-- Total tokens: 456268
-- Vocab size: 26758
+- Total samples: **40,008** (**f**: 21,613, **m**: 17,845)
+- Total duration (hours): **63.03**
+- Average clip duration (seconds): **5.67**
+- Total tokens: **456,268**
+- Vocab size: **26,758**
+- Entities: **12,443** (identified using Shekar NER)
+
+Entity type counts:
+LOC: 4817
+DAT: 3616
+ORG: 1588
+PER: 2156
+EVE: 266
 
 ### v3 — 2026-03-23
 
