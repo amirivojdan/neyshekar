@@ -17,12 +17,16 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 - Vocab size: **26,758**
 - Entities: **12,443** (identified using Shekar NER)
 
+![Clip Duration Histogram](/assets/duration_histogram.png)
+
 Entity type counts:
-LOC: 4817
-DAT: 3616
-ORG: 1588
-PER: 2156
-EVE: 266
+LOC: 4817, 
+DAT: 3616, 
+ORG: 1588, 
+PER: 2156, 
+EVE: 266, 
+
+![Entities Histogram](assets/entity_histogram.png)
 
 ### v3 — 2026-03-23
 
