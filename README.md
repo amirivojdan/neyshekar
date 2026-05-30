@@ -11,6 +11,7 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 ### v4 — 2026-05-14 ([download](https://doi.org/10.5281/zenodo.18073632))
 
 - Total samples: **40,008** (**f**: 21,613, **m**: 17,845)
+- Informal samples: **13946** (34.86%) (identified using Shekar rule-based InformalClassifier)
 - Total duration (hours): **63.03**
 - Average clip duration (seconds): **5.67**
 - Total tokens: **456,268**
