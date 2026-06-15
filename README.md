@@ -1,3 +1,14 @@
+<p align="center">
+<a href="https://huggingface.co/shekar-ai" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/huggingface-shekar--ai-00A693?logo=huggingface"></a>
+
+<img alt="GitHub License" src="https://img.shields.io/github/license/amirivojdan/neyshekar?color=00A693">
+
+</p>
+
+<p align="center">
+    <em>A Large-Scale Open Persian Speech Dataset</em>
+</p>
+
 # Neyshekar
 
 Neyshekar is an open, community-driven **Persian speech dataset** collected via a web-based crowdsourcing platform at **[https://ney.shekar.io](https://ney.shekar.io)**. It is designed to support research and development in **text-to-speech (TTS)**, **automatic speech recognition (ASR)**, **speech representation learning**, and other downstream **Persian speech applications**.
@@ -8,7 +19,12 @@ The recordings are provided by a combination of **volunteer contributors and pai
 
 Neyshekar is released incrementally. Each release represents a stable snapshot of the dataset at the time of publication.
 
-### v4 — 2026-05-14 ([download](https://doi.org/10.5281/zenodo.18073632))
+> [!CAUTION]
+> **Sample mismatches in v4.** A number of clips in the **v4** release (2026-05-14)
+> have misaligned audio–transcript pairs. Training or evaluating on this snapshot
+> may introduce label noise and lead to unreliable results. If you have already downloaded v4, discard it and re-download v4.1.
+
+### V4.1 — 2026-06-15 ([download](https://doi.org/10.5281/zenodo.18073632))
 
 - Total samples: **40,008** (**f**: 21,613, **m**: 17,845)
 - Informal samples: **13946** (34.86%) (identified using Shekar rule-based InformalClassifier)
