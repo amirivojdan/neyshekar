@@ -28,13 +28,6 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 - Total tokens: **565,797**
 - Vocab size: **27,250**
 
-
-> [!CAUTION]
-> **Sample mismatches in v4.** A number of clips in the **v4** release (2026-05-14)
-> have misaligned audio–transcript pairs. Training or evaluating on this snapshot
-> may introduce label noise and lead to unreliable results. If you have already downloaded v4, discard it and re-download v4.1.
-
-
 ### V4.1 — 2026-06-15
 
 - Total samples: **40,008** (**f**: 21,613, **m**: 17,845)
@@ -52,7 +45,13 @@ LOC: 4817,
 DAT: 3616, 
 ORG: 1588, 
 PER: 2156, 
-EVE: 266, 
+EVE: 266,
+
+> [!CAUTION]
+> **Sample mismatches in v4.** A number of clips in the **v4** release (2026-05-14)
+> have misaligned audio–transcript pairs. Training or evaluating on this snapshot
+> may introduce label noise and lead to unreliable results. If you have already downloaded v4, discard it and re-download v4.1.
+
 
 ![Entities Histogram](assets/entity_histogram.png)
 
