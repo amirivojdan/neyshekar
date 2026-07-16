@@ -21,7 +21,7 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 
 ### V5.0 — 2026-07-16 ([download](https://doi.org/10.5281/zenodo.18073632))
 
-- Total samples: **50,026** (**f**: 21,613, **m**: 17,845)
+- Total samples: **50,026** (**f**: 26,826, **m**: 22,655)
 - Informal samples: **17,491** (34.96%) (identified using Shekar rule-based InformalClassifier)
 - Total duration (hours): **79.22**
 - Average clip duration (seconds): **5.7**
