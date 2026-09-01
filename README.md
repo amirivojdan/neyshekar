@@ -19,10 +19,27 @@ The recordings are provided by a combination of **volunteer contributors and pai
 
 Neyshekar is released incrementally. Each release represents a stable snapshot of the dataset at the time of publication.
 
-### V5.0 — 2026-07-16 ([download](https://doi.org/10.5281/zenodo.18073632))
+### V6.0 — 2026-09-01 ([download](https://doi.org/10.5281/zenodo.18073632))
+- Total samples: **62,279** (**f**: 33,735, **m**: 28,076)
+- Informal samples: **15,222 (24.44%)** (identified using Shekar rule-based InformalClassifier)
+- Total duration (hours): **99.02**
+- Average clip duration (seconds): **5.72**
+- Total tokens: **701,621**
+- Vocab size: **29,535**
+
+#### Splits
+
+V6.0 is the first release to ship predefined splits. Splits are assigned per speaker, so a single recorder never straddles two sets and the evaluation splits stay speaker-disjoint from `train`.
+
+| Split | Samples | Share | Hours |
+| --- | --- | --- | --- |
+| `train` | 58,244 | 93.5% | 91.99 |
+| `validation` | 1,886 | 3.0% | 3.14 |
+| `test` | 2,149 | 3.5% | 3.88 |
+
+### V5.0 — 2026-07-16 
 
 - Total samples: **50,026** (**f**: 26,826, **m**: 22,655)
-- Informal samples: **17,491** (34.96%) (identified using Shekar rule-based InformalClassifier)
 - Total duration (hours): **79.22**
 - Average clip duration (seconds): **5.7**
 - Total tokens: **565,797**
@@ -31,29 +48,16 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 ### V4.1 — 2026-06-15
 
 - Total samples: **40,008** (**f**: 21,613, **m**: 17,845)
-- Informal samples: **13,946** (34.86%) (identified using Shekar rule-based InformalClassifier)
 - Total duration (hours): **63.03**
 - Average clip duration (seconds): **5.67**
 - Total tokens: **456,268**
 - Vocab size: **26,758**
 - Entities: **12,443** (identified using Shekar NER)
 
-![Clip Duration Histogram](/assets/duration_histogram.png)
-
-Entity type counts:
-LOC: 4817, 
-DAT: 3616, 
-ORG: 1588, 
-PER: 2156, 
-EVE: 266,
-
 > [!CAUTION]
 > **Sample mismatches in v4.** A number of clips in the **v4** release (2026-05-14)
 > have misaligned audio–transcript pairs. Training or evaluating on this snapshot
 > may introduce label noise and lead to unreliable results. If you have already downloaded v4, discard it and re-download v4.1.
-
-
-![Entities Histogram](assets/entity_histogram.png)
 
 ### v3 — 2026-03-23
 
