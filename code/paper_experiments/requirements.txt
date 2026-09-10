@@ -1,0 +1,23 @@
+# Reproduction environment used for statistics.ipynb and baselines.ipynb
+# Python 3.12
+accelerate==1.14.0
+datasets==5.0.1
+evaluate==0.4.6
+huggingface-hub==1.29.0
+ipykernel==7.3.0
+jiwer==4.0.0
+librosa==1.0.0
+matplotlib==3.11.1
+nbclient==0.11.0
+nbformat==5.11.1
+numpy==2.5.2
+onnxruntime==1.29.0
+pandas==3.0.5
+pyarrow==25.0.1
+scipy==1.18.1
+seaborn==0.13.2
+shekar==1.6.3
+soundfile==0.14.0
+torch==2.13.0
+torchcodec==0.16.0
+transformers==5.16.1

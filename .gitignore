@@ -1,2 +1,21 @@
 .venv/
 dataset/
+*.zip
+*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.ruff_cache/
+
+# Credentials — never commit a private key
+*.pem
+
+# paper_experiments outputs. The package resolves ROOT to code/, so every
+# generated root lands beside it. Checkpoints in particular are large.
+code/data/
+code/results/
+code/checkpoints/
+code/logs/
+code/acl/
