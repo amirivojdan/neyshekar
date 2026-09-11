@@ -1,12 +1,9 @@
 <p align="center">
-<a href="https://huggingface.co/shekar-ai" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/huggingface-shekar--ai-00A693?logo=huggingface"></a>
-<a href="https://t.me/shekar_ai" target="_blank"><img src="https://telegram-badge.vercel.app/api/telegram-badge?channelId=@shekar_ai&color=00A693" alt="Telegram" /></a>
-<img alt="GitHub License" src="https://img.shields.io/github/license/amirivojdan/neyshekar?color=00A693">
-
+  <img src="header.png" alt="Neyshekar" width="640">
 </p>
 
 <p align="center">
-    <em>A Large-Scale Open Persian Speech Dataset</em>
+<a href="https://huggingface.co/shekar-ai" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/huggingface-shekar--ai-00A693?logo=huggingface"></a> <a href="https://t.me/shekar_ai" target="_blank"><img src="https://telegram-badge.vercel.app/api/telegram-badge?channelId=@shekar_ai&color=00A693" alt="Telegram" /></a> <img alt="GitHub License" src="https://img.shields.io/github/license/amirivojdan/neyshekar?color=00A693">
 </p>
 
 # Neyshekar
