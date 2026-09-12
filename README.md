@@ -26,7 +26,7 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 
 #### Splits
 
-V6.0 is the first release to ship predefined splits. Splits are assigned per speaker, so a single recorder never straddles two sets and the evaluation splits stay speaker-disjoint from `train`.
+V6.0 is the first release to ship predefined splits. Splits are assigned per speaker, so a single recorder never straddles two sets and the evaluation splits stay speaker-disjoint from `train`. Every clip also carries an opaque `speaker_id`, so this can be checked directly rather than taken on trust: the 62,279 clips resolve to 190 contributors (134 `train` / 26 `validation` / 30 `test`) with no contributor appearing in two splits. The identifiers are pseudonyms and carry no account name.
 
 | Split | Samples | Share | Hours |
 | --- | --- | --- | --- |

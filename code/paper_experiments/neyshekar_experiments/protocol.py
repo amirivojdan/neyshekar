@@ -15,7 +15,12 @@ DATA = ROOT / "data"
 PROTOCOL = "v2"
 DATA_SEED = 42  # Never change this to repeat an optimization seed.
 HF_REPO = "shekar-ai/neyshekar-v6-persian-asr-fa"
+# The revision every frozen manifest and training run is pinned to. Never repoint
+# it at a newer release: the manifests hash it, so freeze() would reject them.
 HF_REVISION = "7613a5adebabb5f8f1255a47ef42ca7d7b44046c"
+# Adds the per-clip speaker_id column. Clip ids, text, durations and audio bytes
+# are byte-identical to HF_REVISION, so it describes the same recordings.
+SPEAKER_REVISION = "81d14528debcda58a306770b9b493e2b198b9833"
 CV_DIR = DATA / "cv26/cv-corpus-26.0-2026-06-12/fa"
 MODEL_REVISIONS = {
     "openai/whisper-small": "973afd24965f72e36ca33b3055d56a652f456b4d",

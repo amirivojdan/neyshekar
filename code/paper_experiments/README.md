@@ -1,12 +1,13 @@
 # Paper experiments
 
-Code backing the ASR experiments in *Neyshekar: A Dual-Register, Named-Entity-Rich
-Persian Read-Speech Corpus*. It reproduces the training runs, the decodings, the
-paired bootstrap intervals, and the corpus statistics reported there.
+Code backing the ASR experiments in *Neyshekar: An Open Persian Read-Speech
+Corpus for Automatic Speech Recognition*. It reproduces the training runs, the
+decodings, the paired bootstrap intervals, and the corpus statistics reported
+there.
 
-Everything here is the experiment pipeline itself. Manuscript typesetting, remote
-job orchestration, and the private contributor mapping are deliberately not
-included — see [Not included](#not-included).
+Everything here is the experiment pipeline itself. Manuscript typesetting and
+remote job orchestration are deliberately not included — see
+[Not included](#not-included).
 
 ## Layout
 
@@ -37,9 +38,15 @@ Create `code/data/` and populate it before running anything:
   extracted audio.
 - `data/external/psrb/` — populated by `prepare-psrb --download`.
 - `data/manifests/v2/` — written by `prepare`.
+- `data/validation/speaker_mapping.csv` — written by
+  `scripts/export_speaker_mapping.py`.
 
 The Neyshekar audio and pinned pretrained checkpoints are pulled from Hugging
-Face at the revisions pinned in `neyshekar_experiments/protocol.py`.
+Face at the revisions pinned in `neyshekar_experiments/protocol.py`. Two release
+revisions are pinned there and they are not interchangeable: `HF_REVISION` is
+what every frozen manifest hashes, so repointing it makes `freeze()` reject the
+existing manifests, while `SPEAKER_REVISION` adds the per-clip `speaker_id`
+column over byte-identical audio and is read only by the mapping exporter.
 
 ## Environment
 
@@ -134,6 +141,29 @@ decodings rather than re-decoded, so subset results cannot drift from the totals
 Resuming reuses a saved decoding and refuses one whose references, metadata, model
 provenance, or file contents have changed.
 
+### Corpus description
+
+Release v6 carries an opaque `speaker_id` on every clip, so the contributor
+statistics and the speaker-disjointness of the partitions are recomputable:
+
+```bash
+.venv/bin/python scripts/export_speaker_mapping.py        # clip -> contributor
+.venv/bin/python scripts/run_contributor_statistics.py \
+    --mapping data/validation/speaker_mapping.csv         # per-contributor load
+.venv/bin/python scripts/run_acoustic_statistics.py       # clipping, silence, SNR
+.venv/bin/python -m neyshekar_experiments verify-validation
+```
+
+The exporter reads only the identifier columns over the network, so it costs
+megabytes rather than the full release. `verify-validation` checks that the
+mapping covers every clip once, agrees with the release split labels, and shares
+no contributor between splits, then records its SHA-256. The acoustic scan does
+decode every clip, so it needs the audio in the local Hugging Face cache.
+
+With the mapping present, `analyze` additionally reports contributor-clustered
+intervals for the Neyshekar test alongside the utterance-clustered ones; without
+it, those entries are written as pending rather than silently omitted.
+
 ### Running the whole suite
 
 ```bash
@@ -169,9 +199,10 @@ Outputs are cleared and training cells are disabled by default; set
   covers the same multi-GPU scheduling locally.
 - **Manuscript typesetting.** The scripts that assemble and compile the paper
   are not experiment code. `tables` still emits the LaTeX result tables.
-- **The item-level contributor mapping** and the MongoDB exporter that produces
-  it. As stated in the paper, partitions are speaker-disjoint by construction but
-  the mapping itself is not released.
+- **The MongoDB exporter** that joined recordings to platform accounts. It is
+  obsolete: release v6 publishes an opaque `speaker_id` per clip, and
+  `scripts/export_speaker_mapping.py` derives the mapping from that instead, with
+  no private credentials involved.
 - **The Persian YouTube condition.** It is out of scope for the paper, so its
   acquisition scripts are absent. The `prepare-youtube` and `youtube_timestamps`
   code paths remain in the package because run-identity digests cover package
@@ -184,7 +215,8 @@ Outputs are cleared and training cells are disabled by default; set
 .venv/bin/python -m unittest discover -s tests
 ```
 
-51 tests covering scoring, gradient accumulation, evaluation resume semantics,
-artifact hardening, and reproducibility. `test_parallel_suite.py` reads the frozen
-manifests, so run `prepare` (or provide `data/manifests/v2/`) before expecting a
-full pass.
+64 tests covering scoring, gradient accumulation, evaluation resume semantics,
+artifact hardening, reproducibility, and the acoustic measures — including
+recovery of a known 0–30 dB SNR to within about 1 dB.
+`test_parallel_suite.py` reads the frozen manifests, so run `prepare` (or provide
+`data/manifests/v2/`) before expecting a full pass.
