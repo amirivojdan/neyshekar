@@ -10,7 +10,7 @@
 
 Neyshekar is an open, community-driven **Persian speech dataset** collected via a web-based crowdsourcing platform at **[https://ney.shekar.io](https://ney.shekar.io)**. It is designed to support research and development in **text-to-speech (TTS)**, **automatic speech recognition (ASR)**, **speech representation learning**, and other downstream **Persian speech applications**.
 
-The recordings are provided by a combination of **volunteer contributors and paid voice actors**, all of whom are native Persian speakers. Each release represents a **stable snapshot** of the dataset, enabling **reproducible research** and **consistent benchmarking**.
+The recordings are provided by **volunteer contributors**, all of whom are native Persian speakers. Each release represents a **stable snapshot** of the dataset, enabling **reproducible research** and **consistent benchmarking**.
 
 ## Dataset Releases
 
@@ -23,16 +23,17 @@ Neyshekar is released incrementally. Each release represents a stable snapshot o
 - Average clip duration (seconds): **5.72**
 - Total tokens: **701,621**
 - Vocab size: **29,535**
+- Speakers: **190**
 
 #### Splits
 
-V6.0 is the first release to ship predefined splits. Splits are assigned per speaker, so a single recorder never straddles two sets and the evaluation splits stay speaker-disjoint from `train`. Every clip also carries an opaque `speaker_id`, so this can be checked directly rather than taken on trust: the 62,279 clips resolve to 190 contributors (134 `train` / 26 `validation` / 30 `test`) with no contributor appearing in two splits. The identifiers are pseudonyms and carry no account name.
+V6.0 is the first release to ship predefined splits. Splits are assigned per speaker, so a single recorder never straddles two sets and the evaluation splits stay speaker-disjoint from `train`. The `speaker_id` column makes this checkable: no identifier appears in more than one split.
 
-| Split | Samples | Share | Hours |
-| --- | --- | --- | --- |
-| `train` | 58,244 | 93.5% | 91.99 |
-| `validation` | 1,886 | 3.0% | 3.14 |
-| `test` | 2,149 | 3.5% | 3.88 |
+| Split | Samples | Share | Hours | Speakers |
+| --- | --- | --- | --- | --- |
+| `train` | 58,244 | 93.5% | 91.99 | 134 |
+| `validation` | 1,886 | 3.0% | 3.14 | 26 |
+| `test` | 2,149 | 3.5% | 3.88 | 30 |
 
 ### V5.0 — 2026-07-16 
 
