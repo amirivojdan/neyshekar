@@ -3,7 +3,10 @@
 </p>
 
 <p align="center">
-<a href="https://huggingface.co/shekar-ai" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/huggingface-shekar--ai-00A693?logo=huggingface"></a> <a href="https://t.me/shekar_ai" target="_blank"><img src="https://telegram-badge.vercel.app/api/telegram-badge?channelId=@shekar_ai&color=00A693" alt="Telegram" /></a> <img alt="GitHub License" src="https://img.shields.io/github/license/amirivojdan/neyshekar?color=00A693">
+<a href="https://arxiv.org/abs/2609.14542" target="_blank"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2609.14542-00A693.svg"></a>
+<a href="https://huggingface.co/shekar-ai" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/huggingface-shekar--ai-00A693?logo=huggingface"></a>
+<a href="https://t.me/shekar_ai" target="_blank"><img src="https://telegram-badge.vercel.app/api/telegram-badge?channelId=@shekar_ai&color=00A693" alt="Telegram" /></a>
+<img alt="GitHub License" src="https://img.shields.io/github/license/amirivojdan/neyshekar?color=00A693">
 </p>
 
 # Neyshekar
@@ -89,6 +92,21 @@ Any attempt to identify or uncover the identity of speakers in the Neyshekar dat
 
 This dataset is released under the **CC0 1.0 Universal** license.  
 It may be used, modified, and redistributed for any purpose without restriction.
+
+## Citation
+
+If you use Neyshekar in your research, please cite:
+
+```bibtex
+@article{amirivojdan2026neyshekar,
+  title={Neyshekar: An Open Persian Read-Speech Corpus for Automatic Speech Recognition},
+  author={Amirivojdan, Ahmad and Nadiri, Farzad and Alizadeh, Abolfazl and Yaraghi, Shaghayegh},
+  journal={arXiv preprint arXiv:2609.14542},
+  year={2026},
+  doi={10.48550/arXiv.2609.14542},
+  url={https://arxiv.org/abs/2609.14542}
+}
+```
 
 ##
 
