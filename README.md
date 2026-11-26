@@ -86,7 +86,7 @@ V6.0 is the first release to ship predefined splits. Splits are assigned per spe
 
 ## Terms of Use
  
-Any attempt to identify or uncover the identity of speakers in the Neyshekar datasets is strictly prohibited.
+Please refrain from attempting to identify contributors. This is responsible-use guidance rather than an additional CC0 licence condition. Users remain responsible for complying with applicable privacy and data-protection law.
 
 ## License
 
